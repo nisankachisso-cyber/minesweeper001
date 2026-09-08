@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html>
+
+<head> <meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+>
+
+<title>マインスイーパー</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- =========================
+     ゲーム開始前の画面
+========================== -->
+
+<div id="start-screen">
+
+    <h1>マインスイーパー</h1>
+
+
+    <!-- 難易度選択 -->
+
+    <div class="difficulty-area">
+
+        <p>難易度を選択</p>
+
+        <div class="difficulty-wrapper">
+
+            <select id="difficulty">
+
+                <option value="beginner">
+                    初級
+                </option>
+
+                <option value="intermediate">
+                    中級
+                </option>
+
+                <option value="advanced">
+                    上級
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <!-- ゲーム開始ボタン -->
+
+    <button id="start-button">
+        ゲーム開始
+    </button>
+
+
+    <!-- お宝ポイント -->
+
+    <div class="start-treasure">
+
+        <span>お宝ポイント</span>
+
+        <span id="start-treasure-points">
+           💰 0
+        </span>
+
+    </div>
+
+
+    <!-- 遊び方 -->
+
+    <div id="how-to-play">
+
+        <p>【遊びかた】</p>
+
+        <p>安全なマスをすべて開いたらクリア！</p>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     プレイ中の画面
+========================== -->
+
+<div id="game-screen">
+
+
+    <!-- =========================
+         上部固定バー
+    ========================== -->
+
+    <div id="top-bar">
+
+
+        <!-- 設定ボタン -->
+
+        <button
+            id="settings-button"
+            class="square-button"
+            aria-label="設定"
+        >
+            <img
+                src="pictures/setting.png"
+                alt="設定"
+            >
+        </button>
+
+
+
+        <!-- 開く / 旗 モード -->
+
+        <div id="mode-switch">
+
+
+            <button
+                id="open-mode-button"
+                class="mode-button active"
+            >
+                ⛏
+            </button>
+
+
+            <button
+                id="flag-mode-button"
+                class="mode-button"
+            >
+                🚩
+            </button>
+
+
+        </div>
+
+
+
+        <!-- 残り旗数 -->
+
+        <div id="flag-counter">
+
+            🚩 残り：10
+
+        </div>
+
+
+
+        <!-- お宝ポイント -->
+
+        <div id="treasure-counter">
+
+            💰 0
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         盤面エリア
+    ========================== -->
+
+    <div id="game-content">
+
+
+        <div id="message"></div>
+
+
+        <div id="board-container">
+
+            <div id="board"></div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ========================= 
+        下部固定バー 
+    ========================== -->
+
+    <div id="bottom-bar">
+
+        <!-- シールド -->
+
+        <div class="skill-item">
+
+            <button
+                id="shield-button"
+                class="skill-button"
+            >
+                シールド
+            </button>
+
+            <div class="skill-cost">
+                💰️-50
+            </div>
+
+        </div>
+
+
+        <!-- 3×3開放 -->
+
+        <div class="skill-item">
+
+            <button
+                id="open3x3-button"
+                class="skill-button"
+            >
+                3×3開放
+            </button>
+
+            <div class="skill-cost">
+                💰️-160
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================
+    設定ポップアップ
+========================== -->
+<div id="settings-popup-overlay">
+
+    <div id="settings-popup">
+
+        <button id="close-settings-button">
+            ×
+        </button>
+
+        <button id="return-start-button">
+            スタート画面に戻る
+        </button>
+
+        <div class="save-code-area">
+
+            <p>セーブコード</p>
+
+            <input
+                type="number"
+                id="save-code-input"
+                placeholder="お宝ポイントを入力"
+            >
+
+            <button id="load-save-code-button">
+                決定
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="game.js"></script>
+
+</body>
+
+</html>
