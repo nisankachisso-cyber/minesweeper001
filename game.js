@@ -868,7 +868,7 @@ for (
 
 
                         cell.style.backgroundColor =
-                            "#FE2C23";
+                            "#df3b3b";
 
 
                         /*
@@ -897,7 +897,7 @@ for (
 
 
                     cell.style.backgroundColor =
-                        "#FE2C23";
+                        "#df3b3b";
 
 
                     gameOver = true;
