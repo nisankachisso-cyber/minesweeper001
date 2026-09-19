@@ -74,16 +74,6 @@
     </div>
 
 
-    <!-- 遊び方 -->
-
-    <div id="how-to-play">
-
-        <p>【遊びかた】</p>
-
-        <p>安全なマスをすべて開いたらクリア！</p>
-
-    </div>
-
 </div>
 
 
@@ -241,27 +231,44 @@
 
     <div id="settings-popup">
 
-        <button id="close-settings-button">
-            ×
-        </button>
+        <!-- ウィンドウのタイトルバー -->
+        <div id="settings-title-bar">
 
-        <button id="return-start-button">
-            スタート画面に戻る
-        </button>
+            <span>
+                設定
+            </span>
 
-        <div class="save-code-area">
-
-            <p>セーブコード</p>
-
-            <input
-                type="number"
-                id="save-code-input"
-                placeholder="お宝ポイントを入力"
-            >
-
-            <button id="load-save-code-button">
-                決定
+            <button id="close-settings-button">
+                ×
             </button>
+
+        </div>
+
+
+        <!-- ウィンドウの内容 -->
+        <div id="settings-content">
+
+            <button id="return-start-button">
+                スタート画面に戻る
+            </button>
+
+
+            <div class="save-code-area">
+
+                <p>ポイント調整</p>
+
+                <input
+                    type="text"
+                    id="save-code-input"
+                    placeholder="お宝ポイントを入力"
+                    inputmode="numeric"
+                >
+
+                <button id="load-save-code-button">
+                    決定
+                </button>
+
+            </div>
 
         </div>
 
