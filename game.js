@@ -213,25 +213,20 @@ setMode("open");
 shieldButton.addEventListener(
 "click",
 function() {
-    /* すでにONなら何もしない */
+    /* すでにONならOFFにする */
     if (
         shieldActive === true
     ) {
+        deactivateShield();
         return;
     }
-    /*
-    3×3開放がON中なら
-    シールドはONにできない
-    */
+    /*3×3開放がON中ならシールドはONにできない */
     if (
         open3x3Active === true
     ) {
         return;
     }
-    /*
-    お宝ポイントが
-    50未満なら使用できない
-    */
+    /*お宝ポイントが50未満なら使用できない*/
     if (
         treasurePoints < 50
     ) {
